@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Liste de contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css" integrity="sha512-giQeaPns4lQTBMRpOOHsYnGw1tGVzbAIHUyHRgn7+6FmiEgGGjaG0T2LZJmAPMzRCl+Cug0ItQ2xDZpTmEc+CQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400&family=Poppins:wght@500&display=swap');
+</style>
+<body>
+<!-- ------ceci est l'entête de notre page web---  -->
+  <header class="header">
+    <!-- la balise <h1> contient le titre du niveau 1 de notre page web--- -->
+    <h1>Répertoire des contacts</h1>
+  </header>
+<!-- ---voici la fin de notre entête -- -  -->
+
+<!-- Et bien ceci est le  coprs de notre page web 
+  
+  la balise <main > est la section principale de notre page--- -->
+  <main class="section_principale">
+   <!-- la div class="block_formulaire_contact" contient de sous de class liées à notre formulaire-->
+    <div class="block_formulaire_contacts">
+      <div class="header_formulaire">
+  <!-- ---<h2> ceci est  le titre du deuxième niveau -->
+        <h2>Formulaire de contact</h2>
+        <!-- voici la fin de notre deuxième titre-->
+      </div>
+      <!-- Et là c'est la div contenant notre formulaire ----- -->
+      <div class="formulaire">
+        <!-- le début de notre formulaire-->
+        <form action = "" id="form"> 
+          <div class="champs_formulaire">
+            <!-- ce champ reprend le prenom du contact-->
+            <label for="prenom" class="label">Prénom</label>
+            <input type="text" name="prenom" id="prenom" class="input" onblur="validPrenom()" required="required">
+            <p id="prenomErr"></p>
+            
+           <!-- -->
+            <label for="nom" class="label">Nom</label>
+            <input type="text" name="nom" id="nom" class="input" onblur="validNom()" required="required">
+            <p id="nomErr"></p>
+  
+            <label for="telephone" class="label">Téléphone</label>
+            <input type="text" name="telephone" id="telephone" class="input" onblur="validPhone()" required="required">
+            <p id="phoneErr"></p>
+
+            <label for="groupe" class="label">Groupe</label>
+            <input type="text" name="groupe" id="groupe" class="input">
+  
+            <label for="email" class="label">Email</label>
+            <input type="email" name="email" id="email" class="input" onblur="validEmail()">
+            <p id="emailErr"></p>
+
+            <label for="bio" class="label">Bio</label>
+            <textarea name="bio" id="bio" name="bio" class="input_textarea"></textarea>
+            <div class="image_zone">
+              <p class="text-image">Déposez la photo ici ou <span class="span-click">Cliquer ici</span></p>
+              <input type="file" id="inputFile" hidden>
+            </div>
+            <p id="imgErr"></p>
+          </div>
+          <div class="div_bouton">
+            <div class="div_bouton_1">
+              <button type="submit" class="create" id="create">Créer</button>
+            </div>
+            <div class="div_bouton_2">
+              <button type="reset" class="reset" id="reset" >Réinit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    <div class="block_liste_contacts">
+      <div class="header_liste_contacts">
+        <h2>Liste des contacts</h2>
+      </div>
+    </div>
+  </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+html, body {
+  margin: 0px;
+  padding: 0px;
+}
+/*
+  entete
+*/
+.header{
+  width: 100%;
+  background-color: #0880D6;
+}
+/*
+* titre de l'entete
+*/
+.header h1{
+  margin: 0px;
+  padding:20px;
+  padding-left: 30px;
+  color: #ffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+}
+/*
+section principale
+*/
+
+.section_principale{
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  justify-content: space-around;
+}
+
+.block_formulaire_contacts{
+  width: 40%;
+  margin-left:100px;
+  margin-right: 25px;
+  border:0.5px solid #c4c4c4;
+}
+
+.formulaire{
+  margin-top: 20px;
+}
+
+.header_formulaire{
+  background-color: #0880D6;
+  height:54px;
+  text-align: center;
+}
+.header_formulaire h2{
+  margin:0;
+  color: #ffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  padding-top:15px;
+}
+
+.champs_formulaire{
+  padding-right:30px;
+  padding-left:20px;
+}
+.label{
+  display: block;
+  margin-top:20px ;
+  margin-bottom:25px ;
+  color: #0880D6;
+  font-family: 'Poppins', sans-serif;
+}
+.input{
+  display: block;
+  width: 100%;
+  height: 45px;
+  border: 0.5px solid#c4c4c4;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;;
+}
+
+.input_textarea{
+  display: block;
+  width: 100%;
+  height: 120px;
+}
+/*-----------------------------------------------------------------------------*/
+/* drag and drop */
+.image_zone{
+  width: 100%;
+    height: 300px;
+    border: 3px dashed #535354;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.image_zone img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image_zone.active{
+  border: 2px solid #1683ff;
+}
+/*-----------------------------------------------------------------------------*/
+/* drag and drop*/
+.div_bouton{
+  display: flex;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+.div_bouton_1,.div_bouton_2{
+  width: 100px;
+}
+.create, .reset{
+  margin-top: 20px;
+  width: 130px;
+  height: 40px;
+  font-family: 'Poppins', sans-serif;
+  border:none;
+  color:#ffff;
+  font-size: 20px;
+}
+.reset{
+  margin-left: 50px;
+  background-color:#FF3838;
+}
+
+.create{
+  background-color: #0880D6;
+}
+
+.block_liste_contacts{
+  width: 60%;
+  padding-right: 100px;
+  padding-left: 25px;
+}
+.header_liste_contacts{
+  background-color: #0880D6;
+  height: 54px;
+  text-align:center;
+}
+.header_liste_contacts h2{
+  margin:0;
+  color: #ffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  padding-top: 15px;
+}
+
+
+
+
+.block_liste_contacts{
+  height: 200px;
+}
+
+.contacts{
+  padding-left: 10px;
+  display: flex;
+  border: 0.5px solid #dddddd;
+}
+.image_contact{
+  width:25%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.image_contact img{
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+.info_contact{
+  width: 80%;
+  padding-left:40px;
+  padding-top: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+.align{
+  display: flex;
+  justify-content: space-between;
+}
+.icon{
+  margin-top: 19px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+}
+.icon1{
+  color: #555555;
+}
+.icon2{
+  color:#FF3838;
+}
+.info_contact h3{
+  margin-bottom: 0px;
+}
+.info_contact span{
+  display: inline-block;
+  padding-left: 10px;
+}
+.span-click{
+  color: #1683ff;
+  cursor: pointer;
+}
+
+@media screen and (max-width : 1334px) {
+  .section_principale{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .block_formulaire_contacts{
+    width: 80%;
+    margin: 0 auto;
+    
+  }
+
+  .block_liste_contacts{
+    width: 80%;
+    padding: 0;
+    margin: 5% auto;
+  }
+}
