@@ -16,12 +16,12 @@ function validPrenom(){
           }else{
         document.getElementById("prenom").style.borderColor = "red";
         document.getElementById("prenomErr").style.color="red"
-        document.getElementById("prenomErr").innerHTML = "renseigner un nom avec plus de 3 caractères";
+        document.getElementById("prenomErr").innerHTML = `<p><span class="warning__Icon"><i class="fa-solid fa-circle-exclamation"></i></span>renseigner un nom avec plus de 3 caractères</p>`;
     }
       }else if (nom.length > 50) {
         document.getElementById("prenom").style.borderColor = "red";
         document.getElementById("prenomErr").style.color="red"
-        document.getElementById("prenomErr").innerHTML = "renseigner un nom avec moin de 50 caractères";
+        document.getElementById("prenomErr").innerHTML = `<p><span class="warning__Icon"><i class="fa-solid fa-circle-exclamation"></i></span>renseigner un nom avec moin de 50 caractères</p>`;
       }else{
         document.getElementById("prenom").style.borderColor = "";
             document.getElementById("prenomErr").style.color=""
@@ -38,12 +38,12 @@ function validNom(){
           }else{
         document.getElementById("nom").style.borderColor = "red";
         document.getElementById("nomErr").style.color="red"
-        document.getElementById("nomErr").innerHTML = "renseigner un nom avec plus de 3 caractères";
+        document.getElementById("nomErr").innerHTML = `<p><span class="warning__Icon"><i class="fa-solid fa-circle-exclamation"></i></span>renseigner un nom avec plus de 3 caractères</p>`;
     }
       }else if (nom.length > 50) {
         document.getElementById("nom").style.borderColor = "red";
         document.getElementById("nomErr").style.color="red"
-        document.getElementById("nomErr").innerHTML = "renseigner un nom avec moin de 50 caractères";
+        document.getElementById("nomErr").innerHTML = `<p><span class="warning__Icon"><i class="fa-solid fa-circle-exclamation"></i></span>renseigner un nom avec moin de 50 caractères</p>`;
       }else{
         document.getElementById("nom").style.borderColor = "";
             document.getElementById("nomErr").style.color=""
@@ -58,15 +58,15 @@ function validPhone(){
 if(!phoneReg.test(telephone)) {
     document.getElementById("telephone").style.borderColor = "red";
     document.getElementById("phoneErr").style.color="red"
-    document.getElementById("phoneErr").innerHTML = "renseigner un numéro de téléphone valide";
+    document.getElementById("phoneErr").innerHTML = `<p><span class="warning__Icon"><i class="fa-solid fa-circle-exclamation"></i></span>renseigner un numéro de téléphone valide</p>`;
 }else if (telephone.length !== 10) {
     document.getElementById("telephone").style.borderColor = "red";
     document.getElementById("phoneErr").style.color="red"
-    document.getElementById("phoneErr").innerHTML = "renseigner un numéro de téléphone avec 10 chiffres";
+    document.getElementById("phoneErr").innerHTML = `<p><span class="warning__Icon"><i class="fa-solid fa-circle-exclamation"></i></span>renseigner un numéro de téléphone avec 10 chiffres</p>`;
   }else if (!validPrefixes.includes(telephone.substring(0, 3))) {
     document.getElementById("telephone").style.borderColor = "red";
     document.getElementById("phoneErr").style.color="red"
-    document.getElementById("phoneErr").innerHTML = "renseigner un numéro de téléphone au format valide";
+    document.getElementById("phoneErr").innerHTML = `<p><span class="warning__Icon"><i class="fa-solid fa-circle-exclamation"></i></span>renseigner un numéro de téléphone au format valide</p>`;
   }else{
     document.getElementById("telephone").style.borderColor = "";
     document.getElementById("phoneErr").style.color=""
@@ -79,7 +79,7 @@ function validEmail(){
     if (!emailReg.test(email)) {
         document.getElementById("email").style.borderColor = "red";
         document.getElementById("emailErr").style.color="red"
-        document.getElementById("emailErr").innerHTML = "Veuillez saisir une adresse email valide";
+        document.getElementById("emailErr").innerHTML = `<p><span class="warning__Icon"><i class="fa-solid fa-circle-exclamation"></i></span>Veuillez saisir une adresse email valide</p>`;
         return false;
       } else {
         document.getElementById("email").style.borderColor = "";
@@ -108,13 +108,13 @@ imageZone.addEventListener('drop', (event) => {
         imageZone.style.borderColor = "red"
         imageZone.innerHTML = `<p class="text-image">Déposez la photo ici ou <span class="span-click">Cliquer ici</span></p>`
         document.getElementById("imgErr").style.color="red"
-        document.getElementById("imgErr").innerHTML = "le poids de l’image doit être inférieur à 5 Mo";
+        document.getElementById("imgErr").innerHTML = `<p><span class="warning__Icon"><i class="fa-solid fa-circle-exclamation"></i></span>le poids de l’image doit être inférieur à 5 Mo</p>`;
         
     }else if(!validExt.includes(fileType)){
         imageZone.style.borderColor = "red"
         imageZone.innerHTML = `<p class="text-image">Déposez la photo ici ou <span class="span-click">Cliquer ici</span></p>`
         document.getElementById("imgErr").style.color="red"
-        document.getElementById("imgErr").innerHTML = "renseigner une image valide";
+        document.getElementById("imgErr").innerHTML = `<p><span class="warning__Icon"><i class="fa-solid fa-circle-exclamation"></i></span>renseigner une image valide</p>`;
     }
     else{
         imageZone.style.borderColor = ""
